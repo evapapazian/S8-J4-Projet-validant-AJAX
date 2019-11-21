@@ -1,3 +1,6 @@
+https://todolistsoupland.herokuapp.com/ 
+
+La suppression d'emails via AJAX marche en local mais pas sur heroku.
 
 1. Introduction
 
