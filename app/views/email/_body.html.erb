@@ -1,0 +1,10 @@
+<div id="email_clicked">
+	<h1> <%= @email.object %> </h1>
+    <%= @email.body %> </br>
+    <a href="#" class="btn btn-outline-secondary">Marquer comme non lu</a>
+    <%= link_to "Supprimer", email_path(),  method: :delete, :data => {:confirm => "êtes vous sur?"}, class: "btn btn-ouline-danger", remote:true %>
+    <!-- Enlever le remote: true si je n'arrive pas à faire la suppression en ajax --> 
+</div>
+  
+
+

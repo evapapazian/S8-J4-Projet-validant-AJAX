@@ -1,0 +1,4 @@
+alert("le fichier js de destruction est effectué");
+$(document).ready(function() {
+  $("#task-"+ <%= @task.id %>).remove();
+});

@@ -1,0 +1,58 @@
+<style>
+.jumbotron {background-image: url(https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_960_720.png);  background-repeat: no-repeat; background-size: cover;}
+.btn-primary {font-family: URW Gothic L}
+h1 {font-family: URW Gothic L}
+th {font-size: 20px; font-family: URW Gothic L}
+</style>
+
+
+<head>
+<link rel="stylesheet" href="style.css">
+
+<div class="jumbotron">
+  <h1 class="display-4">THP Mailer</h1>
+
+  <hr class="my-4">
+ 
+  <%= link_to "Recevoir un Email", email_index_path,  method: :post, class: "btn btn-secondary" , remote: true%> 
+</div>
+
+</head>
+
+
+
+
+</br>
+</br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Objet du mail</th>
+      <th scope="col">Contenu du mail</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td id="colonne-emails">
+      	
+      	<% @emails.each do |index| %>
+      	 
+         <li class="item" id="email_<%=index.id%>">
+      	  
+      	 <%= link_to index.object, email_path(index), remote:true%>
+
+      	<% end %>
+        </li>
+
+      </td>
+      <td id="contenu"></td>
+      
+    </tr>
+    
+   
+  </tbody>
+</table>
